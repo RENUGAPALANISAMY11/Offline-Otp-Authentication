@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        label, input, button {
+            display: block;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Register Page</h2>
+        <form action="/generate-otp" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="mobile-number">Mobile Number:</label>
+            <input type="tel" id="mobile-number" name="mobile-number">
+            <button type="submit">Generate Online OTP</button>
+        
+            <form action="/generate-offline-otp" method="POST">
+                <button type="submit">Generate Offline OTP</button>
+            <button type="submit">Register Now</button>
+            <a href="/generate-offline-otp">Generate Offline OTP</a>
+        </form>
+        
+    </div>
+</body>
+</html>
